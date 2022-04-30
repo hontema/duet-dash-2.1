@@ -5,15 +5,12 @@ using UnityEngine;
 public class GrowerSinusoidal : MonoBehaviour
 {
     float theta = 0f;
-    float amplitude = 2f;
+    float amplitude = 1.5f;
 
     private float scaleSpeed;
-    private float scaleIncrement = .1f;
+    private float scaleIncrement = .05f;
 
     [SerializeField] Vector3 scaleDirection = new Vector3(1, 1, 1);
-
-    [SerializeField] private Vector3 maxSize = new Vector3(2, 2, 2);
-    [SerializeField] private Vector3 minSize = new Vector3(1, 1, 1);
     [SerializeField] private Vector3 nowSize;
 
     private void Start()
@@ -24,11 +21,14 @@ public class GrowerSinusoidal : MonoBehaviour
     void Update()
     {
 
-        theta += scaleIncrement;
+        
         scaleSpeed = Mathf.Sin(theta) * amplitude;
 
-        transform.localScale = nowSize + (scaleDirection * scaleSpeed * Time.deltaTime);
+        //transform.localScale = nowSize + (scaleDirection * scaleSpeed * Time.deltaTime);
+        transform.localScale += (scaleDirection * scaleSpeed * Time.deltaTime);
         Debug.Log("scale speed is " + scaleSpeed);
+
+        theta += scaleIncrement;
     }
 
 }
