@@ -26,7 +26,8 @@ public class GrowerSinusoidal : MonoBehaviour
 
         //transform.localScale = nowSize + (scaleDirection * scaleSpeed * Time.deltaTime);
         transform.localScale += (scaleDirection * scaleSpeed * Time.deltaTime);
-        Debug.Log("scale speed is " + scaleSpeed);
+        //
+        //Debug.Log("scale speed is " + scaleSpeed);
 
         theta += scaleIncrement;
     }
