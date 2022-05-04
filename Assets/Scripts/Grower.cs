@@ -11,7 +11,7 @@ public class Grower : MonoBehaviour
 
     [SerializeField] Vector3 scaleDirection = new Vector3(1, 1, 1);
 
-    [SerializeField] private Vector3 maxSize = new Vector3(2, 2, 2);
+    [SerializeField] private Vector3 maxSize = new Vector3(1.5f, 1.5f, 1.5f);
     [SerializeField] private Vector3 minSize = new Vector3(1, 1, 1);
 
     // Start is called before the first frame update

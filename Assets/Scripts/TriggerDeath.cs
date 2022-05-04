@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class TriggerDeath : MonoBehaviour
 {
     Restart resetter;
+    [SerializeField] AudioSource audiosource;
 
     private void OnTriggerEnter(Collider other)
     {

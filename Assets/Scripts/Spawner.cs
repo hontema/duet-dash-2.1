@@ -5,6 +5,9 @@ public class Spawner : MonoBehaviour
 
     [SerializeField] GameObject objectToSpawn;
     [SerializeField] Transform[] spawnPoint;
+
+    //[SerializeField] float[] floattest = { 90, 150, 30 };
+
     [SerializeField] float timeUntilSpawnedObjectDestroy = 15f;
 
     // Start is called before the first frame update
@@ -18,11 +21,11 @@ public class Spawner : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            spawnDestroy();
+            spawnthenDestroy();
         }
     }
 
-    void spawnDestroy()
+    void spawnthenDestroy()
     {
 
         //randomindex = Random.Range(0, 3);
